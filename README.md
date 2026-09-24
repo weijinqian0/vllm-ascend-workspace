@@ -47,6 +47,7 @@ Agent 会自动检测你的环境、安装所需工具、配置 Git 远程仓库
 | **ascend-memory-profiling** | 采集并分析昇腾 NPU 的 HBM 显存占用，按组件拆分并溯源 | 需要分析 vLLM 推理服务的显存占用时 |
 | **ascend-profiling-collection** | 采集 Ascend torch profiler：起服务、控制 profile 窗口、运行 workload、远端 analyse 并写 manifest | 需要采集 kernel_details/trace_view 时 |
 | **ascend-profiling-analysis** | 分析已采集的 profiler root/manifest，生成 step/layer/operator/cross-rank 诊断报告 | 需要分析 profiling 结果或生成报告时 |
+| **ascend-model-multistream-overlap-skill** | 通过短窗口 profiling、源码映射、资源依赖图及正确性与性能证据优化多流掩盖 | 需要设计、实现或验证昇腾模型多流调度时 |
 | **ascend-triton-workflow** | 编排昇腾 Triton 算子的开发、正确性验证、优化和证据汇总 | 请求覆盖两个或更多算子生命周期阶段时 |
 | **ascend-triton-operator-development** | 从 PyTorch 参考或 GPU Triton 实现首个正确的昇腾 Triton 算子 | 新算子开发或迁移时 |
 | **ascend-triton-kernel-validation** | 对显式形状、类型、布局和模式矩阵验证昇腾 Triton kernel | 首次正确性或变更后验证时 |
@@ -139,6 +140,7 @@ NVIDIA GPU 流程不再复用 NPU/双仓脚本，而是在同一仓库的
 │   │   ├── ascend-memory-profiling/ # 显存 profiling 技能
 │   │   ├── ascend-profiling-collection/ # torch profiler 采集技能
 │   │   ├── ascend-profiling-analysis/ # profiling 分析报告技能
+│   │   ├── ascend-model-multistream-overlap-skill/ # 模型多流掩盖优化技能
 │   │   ├── vllm-ascend-graph-debug/ # 图模式问题诊断技能
 │   │   ├── vllm-ascend-correctness-validation/ # 正确性验证技能
 │   │   ├── vllm-ascend-change-validation/ # 变更影响与 PR 验证技能

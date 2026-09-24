@@ -38,6 +38,7 @@ compatibility backend for managed sessions, sync, service adapters, and cleanup.
 - `.agents/skills/ascend-memory-profiling/` is the source-of-truth skill package for profiling and attributing HBM memory usage on Ascend NPU for vLLM serving scenarios.
 - `.agents/skills/ascend-profiling-collection/` is the source-of-truth skill package for collecting Ascend torch-profiler traces and verified manifests.
 - `.agents/skills/ascend-profiling-analysis/` is the source-of-truth skill package for analyzing collected profiler roots/manifests and generating reports.
+- `.agents/skills/ascend-model-multistream-overlap-skill/` is the source-of-truth package for evidence-driven Ascend model multistream scheduling and validation.
 - `.agents/skills/ascend-triton-workflow/` is the source-of-truth orchestrator for multi-stage Ascend Triton delivery.
 - `.agents/skills/ascend-triton-operator-development/` is the source-of-truth package for first-correct Ascend Triton development and migration.
 - `.agents/skills/ascend-triton-kernel-validation/` is the source-of-truth package for explicit Ascend Triton correctness matrices.

@@ -37,6 +37,8 @@ jobs:
         run: python -B .agents/scripts/knowledge_validate.py
       - name: Run catalog tests
         run: python -B -m unittest discover -s .agents/tests -p "test_*catalog.py"
+      - name: Run multistream-overlap skill tests
+        run: python -B -m unittest discover -s .agents/skills/ascend-model-multistream-overlap-skill/tests
       - name: Run manifest and knowledge tests
         run: python -B -m unittest discover -s .agents/tests -p "test_run_manifest.py"
       - name: Run graph-debug tests

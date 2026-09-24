@@ -47,6 +47,7 @@ The Agent will detect your environment, install required tools, and configure Gi
 | **ascend-memory-profiling** | Profile and attribute HBM memory usage on Ascend NPU, with per-component breakdown and evidence chains | When you need to analyze memory consumption of a vLLM serving workload |
 | **ascend-profiling-collection** | Collect Ascend torch-profiler data: start service, bracket profile window, run workload, remote analyse, and write a manifest | When you need kernel_details/trace_view captures |
 | **ascend-profiling-analysis** | Analyze collected profiler roots/manifests and generate step/layer/operator/cross-rank reports | When you need to analyze profiling output |
+| **ascend-model-multistream-overlap-skill** | Optimize multistream overlap with bounded profiling, source mapping, resource-aware DAGs, and correctness/performance evidence | When designing, implementing, or validating Ascend model stream scheduling |
 | **ascend-triton-workflow** | Orchestrate Ascend Triton development, validation, optimization, and evidence | When a request spans two or more kernel lifecycle stages |
 | **ascend-triton-operator-development** | Build the first correct Ascend Triton operator from a PyTorch reference or GPU kernel | For new kernel development or migration |
 | **ascend-triton-kernel-validation** | Validate an Ascend Triton kernel across explicit shape, dtype, layout, and mode cases | For initial or post-change correctness validation |
@@ -138,6 +139,7 @@ When talking to an Agent:
 │   │   ├── ascend-memory-profiling/ # Memory profiling skill
 │   │   ├── ascend-profiling-collection/ # Torch profiler collection skill
 │   │   ├── ascend-profiling-analysis/ # Profiling analysis/report skill
+│   │   ├── ascend-model-multistream-overlap-skill/ # Model multistream overlap skill
 │   │   ├── vllm-ascend-graph-debug/ # Graph-mode debugging skill
 │   │   ├── vllm-ascend-correctness-validation/ # Correctness validation skill
 │   │   ├── vllm-ascend-change-validation/ # Change impact and PR validation skill
